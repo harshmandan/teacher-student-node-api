@@ -93,3 +93,5 @@ router.post('/signup', function(req, res, next) {
         return res.status(400).send({error: 'Invalid/Not enough paramters'});
     }
 });
+
+module.exports=router;
