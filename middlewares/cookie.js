@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 const config = require("../credentials/config");
 
 module.exports.teacher = function (req, res, next) {
+  console.log(req.cookies);
   if (req.cookies.myauthtoken) {
     jwt.verify(req.cookies.myauthtoken, config.jwt_secret_key, function (err, data) {
         if (err) return res.status(401).send({ message: "Invalid authorization code" });

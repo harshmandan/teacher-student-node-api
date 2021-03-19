@@ -32,6 +32,7 @@ async function findStudent(email) {
     }
 }
 
+
 router.post('/login', async function(req, res, next) {
     if(req.body.email && req.body.password && req.body.method && req.body.method=="teacher") {
         let result = await findTeacher(req.body.email);
@@ -74,7 +75,7 @@ router.post('/login_cookie', async function(req, res, next) {
             if(isValidPassword) {
                 let token = jwt.sign({_id: result.teacher._id, user_type:'teacher'}, config.jwt_secret_key);
                 res
-                .cookie('myauthtoken', token, {sameSite: 'none', secure: true, httpOnly: true, maxAge:99999})
+                .cookie('myauthtoken', token, {sameSite: 'none', httpOnly: true, maxAge:9999999999})
                 .send({teacher:result.teacher});
             } else {
                 return res.status(400).send({error: 'Invalid password'});
