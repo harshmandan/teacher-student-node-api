@@ -1,0 +1,19 @@
+@mixin card($width, $height, $bg, $border) {
+    width: $width;
+    height: $height;
+    background-color: $bg;
+    border: $border;
+    @if color.blackness($bg)>35 {
+        color:white;
+    } @else {
+        color:black;
+    }
+}
+
+$font-sizes: 8px 10px 12px 14px 24px;
+
+@each $el in $font-sizes {
+    .font-size-#{$el} {
+        font-size: $el;
+    }
+}

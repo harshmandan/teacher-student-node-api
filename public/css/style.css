@@ -1,0 +1,50 @@
+.font-size-8px {
+  font-size: 8px;
+}
+
+.font-size-10px {
+  font-size: 10px;
+}
+
+.font-size-12px {
+  font-size: 12px;
+}
+
+.font-size-14px {
+  font-size: 14px;
+}
+
+.font-size-24px {
+  font-size: 24px;
+}
+
+body {
+  background-color: lightyellow;
+}
+
+h1 {
+  color: darkblue;
+}
+
+.card-primary {
+  width: 300px;
+  height: 200px;
+  background-color: darkblue;
+  border: red 2px solid;
+  color: white;
+}
+
+.card-secondary, .card-tertiary {
+  width: 300px;
+  height: 200px;
+  background-color: #008cff;
+  border: red 2px solid;
+  color: black;
+}
+
+.card-tertiary {
+  padding: 20px;
+  margin: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

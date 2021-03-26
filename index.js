@@ -30,6 +30,9 @@ if(process.env.NODE_ENV!="production") {
     app.use(morgan(':method :url :status :response-time ms'));
 }
 
+//server public folder
+app.use('/public', express.static('public'));
+
 //router
 const router = require('./routes/index');
 // const router = require('/routes'); //this also works

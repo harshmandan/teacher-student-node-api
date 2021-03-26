@@ -1,0 +1,26 @@
+@use "sass:color";
+
+@import "_colors.scss";
+@import "_components.scss";
+
+body {
+    background-color:$bgcolor;
+}
+
+h1 {
+    color: $primary-color;
+}
+
+.card-primary {
+    @include card(300px, 200px, $primary-color, red 2px solid)
+}
+
+.card-secondary {
+    @include card(300px, 200px, $secondary-color, red 2px solid)
+}
+
+.card-tertiary {
+   @extend .card-secondary;
+   padding:20px;
+   margin: 5px;
+}

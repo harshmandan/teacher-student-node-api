@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass scss/index.scss public/css/style.css"
   },
   "author": "harsh",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "fs": "0.0.1-security",
@@ -22,5 +24,8 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
   }
 }
